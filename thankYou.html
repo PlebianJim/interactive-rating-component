@@ -11,11 +11,20 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js" defer></script>
-    <title>Interactive rating component</title>
+    <title>Interactive rating component - Thank you page</title>
 </head>
 
 <body>
-
+    <div class="container-thankP">
+        <img class="container-img-thankP" src="images/illustration-thank-you.svg" alt="">
+        <p class="container-p-thankP">You selected <span id="user-selection"></span> out of 5</p>
+        <h1 class="container-h1-thankP">Thank you!</h1>
+        <p class="container-p-two-thankP">We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+    </div>
 </body>
+<script>
+    const userSelection = localStorage.getItem("userSelection");
 
+    document.getElementById("user-selection").textContent = userSelection;
+</script>
 </html>

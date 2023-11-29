@@ -136,3 +136,70 @@ body {
         margin-top: 10px;
     }
 }
+
+/***** Thank You Page *****/
+.container-thankP {
+    background-color: hsl(213, 19%, 18%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    border-radius: 25px;
+    gap: 2%;
+}
+
+
+.container-img-thankP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    width: 175px;
+}
+
+.container-p-thankP {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(216, 12%, 30%);
+    padding: 10px;
+    border-radius: 25px;
+    width: 50%;
+    text-align: center;
+    font-weight: 400;
+}
+
+.container-h1-thankP {
+    color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 35px;
+}
+
+.container-p-two-thankP {
+    color: hsl(217, 12%, 63%);
+    font-weight: 400;
+    width: 400px;
+    text-align: center;
+    line-height: 25px;
+}
+
+@media (max-width: 504px) {
+    .container-thankP {
+        height: 350px;
+        width: 350px;
+    }
+
+    .container-img-thankP {
+        height: 75px;
+        width: 100px;
+    }
+
+    .container-p-thankP {
+        width: 55%;
+    }
+
+    .container-p-two-thankP {
+        width: 260px;
+    }
+}
