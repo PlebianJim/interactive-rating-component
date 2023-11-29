@@ -36,28 +36,32 @@ function ratingsChangeColour() {
 ////
 
 function storeSelection(value) {
-    localStorage.setItem("userSelection", value);
+  localStorage.setItem("userSelection", value);
 }
 
 function handleRatingSelection() {
-    const ratings = document.querySelectorAll(".container-unordered-list-list-item");
+  const ratings = document.querySelectorAll(
+    ".container-unordered-list-list-item"
+  );
 
-    ratings.forEach((rating) => {
-        rating.addEventListener("click", () => {
-            const selectedValue = rating.dataset.value;
+  ratings.forEach((rating) => {
+    rating.addEventListener("click", () => {
+      const selectedValue = rating.dataset.value;
 
-            storeSelection(selectedValue);
+      storeSelection(selectedValue);
 
-            ratings.forEach((r) => {
-                r.style.backgroundColor = r === rating ? "hsl(25, 97%, 53%)" : "hsl(216, 12%, 30%)";
-                r.style.color = r === rating ? "hsl(0, 0%, 100%)" : "hsl(217, 12%, 63%)";
-            });
-        });
-    });  
+      ratings.forEach((r) => {
+        r.style.backgroundColor =
+          r === rating ? "hsl(25, 97%, 53%)" : "hsl(216, 12%, 30%)";
+        r.style.color =
+          r === rating ? "hsl(0, 0%, 100%)" : "hsl(217, 12%, 63%)";
+      });
+    });
+  });
 }
 
 function redirectToThankYouPage() {
-    window.location.href = "thankYou.html";
+  window.location.href = "thankYou.html";
 }
 
 document.addEventListener("DOMContentLoaded", handleRatingSelection);
